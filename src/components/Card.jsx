@@ -7,10 +7,17 @@ import LogoImg from '../image/logo.svg';
 import NikeImg from '../image/nike.png';
 
 const Card = () => {
+  const Card = () => {
+    const colors = [
+        {value: "#b6a179"},
+        {value: "#272425"},
+        {value: "#6389cb"},
+        {value: "#f2c758"},
+        {value: "#ffffff"}
+    ];
+    
   return (
-    <div className='w-[426px] min-h-[600px] bg-[#e4dfdc]'>
-        Card
-    </div>
+    
   )
 }
 
