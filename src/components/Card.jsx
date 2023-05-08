@@ -14,40 +14,47 @@ import LogoImg from '../image/logo.svg';
         {value: "#ffffff"}
     ];
   return (
-    //card Wrapper
-        <div className='w-[426px] min-h-[600px] bg-[#e4dfdc] rounded-[30px] border-[4px] border-white px-[40px] py-[24px] cursor-pointer'>
-            {/* cardl logo */}
-            <div className='mb-6'>
-                <img src={LogoImg} alt=''/>
-            </div>
+    //card wrapper
+        <div>
+            {/* card */}
+            <div className='w-[426px] min-h-[600px] bg-[#e4dfdc] rounded-[30px] border-[4px] border-white px-[40px] py-[24px] cursor-grab relative'>
+                {/* card logo */}
+                <div className='mb-6'>
+                    <img src={LogoImg} alt=''/>
+                </div>
+                
+                {/*card title */}
+                <div className='text-5xl mb-6 font-extrabold'>Nike Air Max Pre-Day</div>
 
-            {/* cardl title */}
-            <div>title</div>
+                {/*subtitle */}
+                <div className='max-w-[300px] text-[]#000000'>
+                    <p>Taking the classic look of heritage Nike Running into new realm, the
+                        Nike Air Max Pre-Day brings you a fast-paced look that's ready for
+                        today's world.
+                    </p>
+                </div>
 
-            {/* cardl subtitle */}
-            <div>subtitle</div>
-
-            <div>
-                <button>button</button>
-                <div>price</div>
-            </div>
-
-            <ul>
-                {/*Colors*/}
-                {colors.map((color, index) => {
-                    return (
-                        <li
-                            key={index}
-                            className='w-8 h-8 rounded-full cursor-pointer'
-                            style={{backgroundColor: color.value}}
-                        ></li>
-                    )
-                } )}
-            </ul>
-
-            {/*Card Image*/}
-            <div>
-                <img src={NikeImg} alt='' draggable='false'/>
+                {/*  btn & price wrapper */}
+                <div className='flex items-center gap-x-[20px] mt-4'>
+                    <button className='bg-[#2d2b2c] text-white text-base font-medium py-[16px] px-[40px] rounded-lg'>Add to Bag</button>
+                    <div className='text-[24px] font-bold text-[#000000]'>$495.00</div>
+                </div>
+                {/* colors */}
+                <ul className='flex gap-x-[10px] mt-6'>
+                    {colors.map((color, index) => {
+                        return (
+                            <li
+                                key={index}
+                                style={{backgroundColor: color.value}}
+                                className='w-8 h-8 rounded-full cursor-pointer'
+                            ></li>
+                        )
+                    })}
+                </ul>
+                {/* card image */}
+                <div className='absolute top-12 -right-64 w-[620px]'>
+                    <img src={NikeImg} alt=''  draggable='false'/>
+                </div>
             </div>
         </div>
   )
