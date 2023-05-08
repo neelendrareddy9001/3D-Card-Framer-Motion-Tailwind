@@ -1,4 +1,8 @@
 import React from 'react';
+
+//import framer motion hooks
+import { useMotionValue, useTransform, motion } from 'framer-motion';
+
 //Nike image
 import NikeImg from '../image/nike.png';
 
@@ -15,7 +19,7 @@ import LogoImg from '../image/logo.svg';
     ];
   return (
     //card wrapper
-        <div>
+        <div style={{perspective: 2000}}>
             {/* card */}
             <div className='w-[426px] min-h-[600px] bg-[#e4dfdc] rounded-[30px] border-[4px] border-white px-[40px] py-[24px] cursor-grab relative'>
                 {/* card logo */}
